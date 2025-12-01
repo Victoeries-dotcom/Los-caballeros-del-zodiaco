@@ -36,8 +36,8 @@
       <h2 class="hero-title">Bienvenidos a AnimeLab</h2>
       <p class="hero-sub">Este sitio sirve para que los usuarios puedan ver la diverdidad de personajes en el mundo de los Zodiacos <strong>Animes</strong>, <strong>Peliculas</strong> y <strong>Series</strong>.</p>
       <div class="quick-actions">
-        <button id="showHint" class="btn">Ver pista (JS)</button>
-        <button class="btn" onclick="document.querySelector('#gallery').scrollIntoView({behavior:'smooth'})">Ir a Galería</button>
+        <button id="showHint" class="btn btn-outline">Ver pista (JS)</button>
+        <button class="btn btn-outline" onclick="document.querySelector('#gallery').scrollIntoView({behavior:'smooth'})">Ir a Galería</button>
       </div>
     </section>
 
@@ -48,7 +48,7 @@
         <!-- Personajes iniciales -->
         <article class="card">
          <!-- <div class="avatar avatar-1" aria-hidden="true"></div>-->
-            <img src="/img/virgo arriba.png" class="card-img" /> 
+           <!-- <img src="/img/virgo arriba.png" class="card-img" /> -->
           <h4>Shaka de Virgo</h4>
           <img src="img/shaka.png" alt="imagen" width="250">
           <p>Considerado “más cercano a un dios”.
@@ -63,7 +63,7 @@ Meditación que eleva su cosmos a niveles divinos.</p>
 
         <article class="card">
         
-           <img src="/img/shura arriba 2" class="card-img" /> 
+          <!--- <img src="/img/shura arriba 2" class="card-img" /> -->
           <h4>Shura De Capriconio</h4>
           <img src="img/shura.jpn" alt="imagen de Shura de Capricornio" width="250">
           
@@ -77,7 +77,7 @@ Precisión absoluta.</p>
 
         <article class="card">
           <!---<div class="avatar avatar-3" aria-hidden="true"></div> -->
-            <img src="/img/mu arriba 2" class="card-img" /> 
+          <!--  <img src="/img/mu arriba 2" class="card-img" /> -->
           <h4>Mu De Aries</h4>
           <img src="img/mu aries.png" alt="imagen de Mu de Aries" width="250">
           <p>Telequinesis, levitación.
@@ -90,7 +90,7 @@ Starlight Extinction y Crystal Wall (barrera impenetrable).</p>
 
         <!-- NUEVO PERSONAJE INTERACTIVO (obligatorio) -->
         <article class="card ">
-          <img src="/img/geminis arriba 2" class="card-img" /> 
+        <!--- <img src="/img/geminis arriba 2" class="card-img" /> -->
           <h4>Saga De Geminis</h4>
           <img src="img/geminis.png" alt="imagen de Saga de Geminis" width="250">
           <p>Control de ilusiones.
@@ -101,7 +101,7 @@ Explosión Galáctica: uno de los ataques más poderosos de todo el anime.
 
 Cosmos entre los más altos.</p>
       
-            <button class="btn" data-profile="Saga De Geminis">Ver Perfil Completo</button>
+            <button class="btn btn-outline" data-profile="Saga De Geminis">Ver Perfil Completo</button>
           </div>
         </article>
       </div>
@@ -115,7 +115,8 @@ Cosmos entre los más altos.</p>
       <div class="gallery-grid">
 
         <figure class="thumb" tabindex="5" data-src="assets/cara de camus.png" aria-label="Camus De Acuario" onclick="openLightbox('assets/Acuario.jpg')">
-          <img src="img/camus ilus  arriba" alt="Camus De Acuario" />
+       <!---   <img src="assets/cara de camus.png" alt="Camus De Acuario" />
+        <img src="img/camus ilus  arriba" alt="Camus De Acuario" /> -->
           <figcaption>Camus De Acuario 
             <img src="img/camus abajo" alt="12">
           </figcaption>
@@ -215,7 +216,7 @@ Cosmos entre los más altos.</p>
           <span class="field-msg" id="messageMsg" aria-live="polite"></span>
         </label>
         <div class="form-actions">
-          <button type="submit" class="btn">Enviar</button>
+          <button type="submit" class="btn btn-outline">Enviar</button>
           <button type="reset" class="btn btn-outline">Limpiar</button>
         </div>
       </form>
@@ -252,6 +253,7 @@ Cosmos entre los más altos.</p>
         <input id="audioVol" type="range" min="0" max="1" step="0.01" value="0.6" />
         <audio id="bgAudio" preload="none">
           <source src="assets/music/audioZodiaco.unknown" type="audio/mpeg">
+         
       
         </audio>
       </div>

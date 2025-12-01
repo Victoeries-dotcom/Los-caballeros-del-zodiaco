@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AnimeLab - Aprendiendo HTML, CSS y JavaScript</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <h1 class="logo">Los caballeros del Zodiaco</h1>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Abrir menú">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-list" id="navList">
+          <li><a href="#home" class="nav-link">Inicio</a></li>
+          <li><a href="#characters" class="nav-link">Personajes</a></li>
+          <li><a href="#gallery" class="nav-link">Galería</a></li>
+          <li><a href="#news" class="nav-link">Noticias</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+          <li><a href="#about" class="nav-link">Acerca</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeBtn" class="theme-btn" title="Cambiar tema" aria-pressed="false">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <h2 class="hero-title">Bienvenidos a AnimeLab</h2>
+      <p class="hero-sub">Este sitio sirve para que los usuarios puedan ver la diverdidad de personajes en el mundo de los Zodiacos <strong>Animes</strong>, <strong>Peliculas</strong> y <strong>Series</strong>.</p>
+      <div class="quick-actions">
+        <button id="showHint" class="btn">Ver pista (JS)</button>
+        <button class="btn" onclick="document.querySelector('#gallery').scrollIntoView({behavior:'smooth'})">Ir a Galería</button>
+      </div>
+    </section>
+
+    <!-- PERSONAJES -->
+    <section id="characters" class="container cards">
+      <h3>Personajes destacados</h3>
+      <div class="card-grid">
+        <!-- Personajes iniciales -->
+        <article class="card">
+         <!-- <div class="avatar avatar-1" aria-hidden="true"></div>-->
+            <img src="/img/virgo arriba.png" class="card-img" /> 
+          <h4>Shaka de Virgo</h4>
+          <img src="img/shaka.png" alt="imagen" width="250">
+          <p>Considerado “más cercano a un dios”.
+
+Tenbu Hōrin: anula los sentidos del enemigo.
+
+Rikudō Rinne: reencarnación espiritual.
+
+Meditación que eleva su cosmos a niveles divinos.</p>
+          <button class="btn btn-outline" data-profile="Shaka De Virgo">Ver Perfil</button>
+        </article>
+
+        <article class="card">
+        
+           <img src="/img/shura arriba 2" class="card-img" /> 
+          <h4>Shura De Capriconio</h4>
+          <img src="img/shura.jpn" alt="imagen de Shura de Capricornio" width="250">
+          
+          <p>Maestro de la espada Excalibur (su propio brazo corta cualquier cosa).
+
+Excalibur y Jumping Stone.
+
+Precisión absoluta.</p>
+          <button class="btn btn-outline" data-profile="Mu De Aries">Ver Perfil</button>
+        </article>
+
+        <article class="card">
+          <!---<div class="avatar avatar-3" aria-hidden="true"></div> -->
+            <img src="/img/mu arriba 2" class="card-img" /> 
+          <h4>Mu De Aries</h4>
+          <img src="img/mu aries.png" alt="imagen de Mu de Aries" width="250">
+          <p>Telequinesis, levitación.
+
+Capaz de reparar armaduras.
+
+Starlight Extinction y Crystal Wall (barrera impenetrable).</p>
+          <button class="btn btn-outline" data-profile="Saga De Geminis">Ver Perfil</button>
+        </article>
+
+        <!-- NUEVO PERSONAJE INTERACTIVO (obligatorio) -->
+        <article class="card ">
+          <img src="/img/geminis arriba 2" class="card-img" /> 
+          <h4>Saga De Geminis</h4>
+          <img src="img/geminis.png" alt="imagen de Saga de Geminis" width="250">
+          <p>Control de ilusiones.
+
+Otra dimensión: envía al enemigo a un vacío cósmico.
+
+Explosión Galáctica: uno de los ataques más poderosos de todo el anime.
+
+Cosmos entre los más altos.</p>
+      
+            <button class="btn" data-profile="Saga De Geminis">Ver Perfil Completo</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    
+    <!-- GALLERY -->
+    <section id="gallery" class="container">
+      <h3>Galería</h3>
+      <p>Haz click en cualquier "tarjeta" para abrir una vista más grande.</p>
+      <div class="gallery-grid">
+
+        <figure class="thumb" tabindex="5" data-src="assets/cara de camus.png" aria-label="Camus De Acuario" onclick="openLightbox('assets/Acuario.jpg')">
+          <img src="img/camus ilus  arriba" alt="Camus De Acuario" />
+          <figcaption>Camus De Acuario 
+            <img src="img/camus abajo" alt="12">
+          </figcaption>
+        </figure>
+
+
+        <figure class="thumb" tabindex="0" data-src="assets/yoga.png"  arial-label="Hyoga De Cisne"  onclick="openLightbox('assets/yoga 2.png')">
+          <img src="assets/yoga.png" alt="Hyoga De Cisne" />
+          <figcaption>Hyoga De Cisne
+            <img src="img/yoga 2 abajo.jpg" alt="">
+          </figcaption>
+        </figure>
+
+
+        <figure class="thumb" tabindex="0" data-src="assets/iki Fenix.svg" arial-label="Ikki Del Ave Fenix" onclick="openLightbox('assets/ave orjo.png')">
+          <img src="assets/iki humilde.jpg" alt="Ikki Del Ave Fenix" />
+          <figcaption>Ikki Del Ave Fenixm 
+            <img src="img/ave roja" alt="">
+
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- GALERÍA EXTENDIDA (3 imágenes nuevas) -->
+      <h4 class="mt">Galería Extendida</h4>
+      <div class="gallery-grid">
+
+        <figure class="thumb" tabindex="0" onclick="openLightbox('assets/shina 12.jpg')">
+          <img src="assets/shina" alt="Shaina De Ofiuco" />
+          <figcaption>Shaina De Ofiuco </figcaption>
+        </figure>
+
+
+        <figure class="thumb" tabindex="0" onclick="openLightbox('assets/mascara 2.jpg')">
+          <img src="assets/mascara.jpg" alt="Death Mask de Cáncer" />
+          <figcaption>Death Mask de Cáncer</figcaption>
+        </figure>
+
+
+        <figure class="thumb" tabindex="0" onclick="openLightbox('assets/alas 2.jpg')">
+          <img src="assets/sagitario.jpg" alt="Aioros De Sagitario" />
+          <figcaption>Aioros De Sagitario</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="container">
+      <h3>Próximos Estrenos / Noticias</h3>
+      <div class="news-grid">
+        <article class="news-card">
+          <img src="assets/templo" alt="Noticia 1" />
+          <div class="news-body">
+            <h4>Estrellas en Ascenso — Temporada 2</h4>
+            <time datetime="2025-11-25">25 Noviembre 2025</time>
+            <p>Se confirma la segunda temporada de la serie "EL templo". Nuevos personajes y mechas.</p>
+            <button class="btn btn-outline" data-news="news1">Leer más</button>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="assets/juego" alt="Noticia 2" />
+          <div class="news-body">
+            <h4>Festival anual — Concurso de trajes</h4>
+            <time datetime="2025-12-05">05 Diciembre 2025</time>
+            <p>Abierta la convocatoria para el concurso de trajes con premios y exposición virtual.</p>
+            <button class="btn btn-outline" data-news="news2">Leer más</button>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="assets/cosplay" alt="Noticia 3" />
+          <div class="news-body">
+            <h4>Lanzamiento del juego "Shaka's"</h4>
+            <time datetime="2025-11-30">30 Noviembre 2025</time>
+            <p>Proyecto indie inspirado en los temas del curso: pruebas técnicas y estética anime.</p>
+            <button class="btn btn-outline" data-news="news3">Leer más</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="container">
+      <h3>Contacto</h3>
+      <form id="contactForm" class="form" novalidate>
+        <label>Nombre
+          <input type="text" name="name" id="name" required />
+          <span class="field-msg" id="nameMsg" aria-live="polite"></span>
+        </label>
+        <label>Correo
+          <input type="email" name="email" id="email" required />
+          <span class="field-msg" id="emailMsg" aria-live="polite"></span>
+        </label>
+        <label>Mensaje
+          <textarea name="message" id="message" rows="4" required></textarea>
+          <span class="field-msg" id="messageMsg" aria-live="polite"></span>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Enviar</button>
+          <button type="reset" class="btn btn-outline">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ABOUT / CREDITS -->
+    <section id="about" class="container about-section">
+      <h3>Acerca de AnimeLab</h3>
+      <button class="btn btn-outline" id="aboutToggle">Mostrar Créditos</button>
+      <div id="aboutContent" class="about-content" hidden>
+        <p><strong>Proyecto:</strong> Mejorando un sitio Web dinámico</p>
+        <p><strong>Alumno:</strong> I.S.C EMMANUEL DE ATOCHA PEREZ OJEDA</p>
+        <p><strong>Asignatura:</strong> Desarrollo Web — TTD-4A</p>
+        <p>Descripción: Implementación y mejora de frontend con HTML, CSS y JavaScript.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>AnimeLab • Proyecto educativo — HTML • CSS • JavaScript</p>
+    <p class="small">Abre el proyecto en Visual Studio Code para editar los archivos en /css, /js y /assets.</p>
+    <div class="footer-row">
+
+    
+        <a href="#" class="social" aria-label="Instagram">📸</a>
+        <a href="#" class="social" aria-label="YouTube">▶️</a>
+        <a href="#" class="social" aria-label="Facebook">📘</a>
+        <a href="#" class="social" aria-label="X">✖️</a>
+      </div>
+
+      <div class="audio-player">
+        <button id="audioToggle" class="btn-outline" aria-pressed="false">🔊</button>
+        <button id="audioMute" class="btn-outline" aria-pressed="false">🔇</button>
+        <input id="audioVol" type="range" min="0" max="1" step="0.01" value="0.6" />
+        <audio id="bgAudio" preload="none">
+          <source src="assets/music/audioZodiaco.unknown" type="audio/mpeg">
+      
+        </audio>
+      </div>
+    </div>
+
+    <p id="copyright"></p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeLightbox(event)">
+    <img id="lightboxImg" alt="Vista ampliada" />
+    <button class="lightbox-close" onclick="closeLightbox({target:{id:'lightbox'}})" aria-label="Cerrar">✖</button>
+  </div>
+
+  <!-- MODAL PERFIL -->
+  <div id="profileModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-inner" role="document">
+      <button class="modal-close" id="profileClose" aria-label="Cerrar">✖</button>
+      <div id="profileContent"></div>
+    </div>
+  </div>
+
+  <!-- MODAL NEWS -->
+  <div id="newsModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-inner" role="document">
+      <button class="modal-close" id="newsClose" aria-label="Cerrar">✖</button>
+      <div id="newsContent"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
